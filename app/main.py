@@ -22,10 +22,10 @@ def get_weather() -> None:
     )
     res_json = res.json()
     print(
-        f"{res_json["location"]["name"]}/{res_json["location"]["country"]} "
-        f"{res_json["location"]["localtime"]} "
-        f"Weather: {res_json["current"]["temp_c"]} Celsius, "
-        f"{res_json["current"]["condition"]["text"]}"
+        f"{res_json['location']['name']}/{res_json['location']['country']} "
+        f"{res_json['location']['localtime']} "
+        f"Weather: {res_json['current']['temp_c']} Celsius, "
+        f"{res_json['current']['condition']['text']}"
     )
 
 
