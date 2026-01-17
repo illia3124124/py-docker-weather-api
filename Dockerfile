@@ -1,7 +1,7 @@
-FROM python:3.15.0a5-alpine3.23
+FROM python:3.11-alpine
 LABEL maintainer="imileckiy@gmail.com"
 
-ENV PYTHOUNNBUFFER 1
+ENV PYTHONUNBUFFERED  1
 
 WORKDIR .
 
