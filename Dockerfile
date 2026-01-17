@@ -3,11 +3,11 @@ LABEL maintainer="imileckiy@gmail.com"
 
 ENV PYTHOUNNBUFFER 1
 
-WORKDIR app/
+WORKDIR .
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-COPY . .
+COPY ./app /app
 
 CMD ["python", "app/main.py"]

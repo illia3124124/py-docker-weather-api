@@ -1,4 +1,5 @@
-import os, requests
+import os
+import requests
 
 from dotenv import load_dotenv
 
@@ -7,16 +8,16 @@ load_dotenv()
 
 
 API_KEY = os.getenv("API_KEY")
+CITY = "Paris"
+BASE_URL = f"https://api.weatherapi.com/v1/current.json?q={CITY}"
 
 
 def get_weather() -> None:
-    CITY = "Paris"
-    BASE_URL = f"https://api.weatherapi.com/v1/current.json?q={CITY}"
     print(f"Performing request to Weather API for city {CITY}...")
     res = requests.get(
         BASE_URL,
         {
-            "key": f"{API_KEY}",
+            "key": API_KEY,
         }
     )
     res_json = res.json()
